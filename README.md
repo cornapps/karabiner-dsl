@@ -12,6 +12,8 @@ when app Terminal:
   ctrl+l sends cmd+k
 ```
 
+For a starter config to copy, see [examples/basic_example.kb](https://github.com/cornapps/karabiner-dsl/blob/main/examples/basic_example.kb).
+
 ## Install
 
 Karabiner DSL requires Python 3.11 or newer. Install the `karabiner-dsl`

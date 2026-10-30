@@ -7,13 +7,13 @@ default:
 check:
     uv run python -m unittest discover -s tests -v
     KARABINER_HELPERS_ROOT={{example_helpers}} uv run python karabiner_dsl.py --lint tests/fixtures/showcase.kb
-    uv run python karabiner_dsl.py --lint device_enabled_sample.kb
-    uv run python karabiner_dsl.py --lint either_shift_sample.kb
-    uv run python karabiner_dsl.py --lint presenter_sample.kb
+    uv run python karabiner_dsl.py --lint examples/device_enabled_sample.kb
+    uv run python karabiner_dsl.py --lint examples/either_shift_sample.kb
+    uv run python karabiner_dsl.py --lint examples/presenter_sample.kb
     KARABINER_HELPERS_ROOT={{example_helpers}} uv run python karabiner_dsl.py --roundtrip tests/fixtures/showcase.kb
-    uv run python karabiner_dsl.py --roundtrip device_enabled_sample.kb
-    uv run python karabiner_dsl.py --roundtrip either_shift_sample.kb
-    uv run python karabiner_dsl.py --roundtrip presenter_sample.kb
+    uv run python karabiner_dsl.py --roundtrip examples/device_enabled_sample.kb
+    uv run python karabiner_dsl.py --roundtrip examples/either_shift_sample.kb
+    uv run python karabiner_dsl.py --roundtrip examples/presenter_sample.kb
     uv run python -m compileall karabiner_dsl
 
 zed-check:

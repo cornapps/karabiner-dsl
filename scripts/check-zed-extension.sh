@@ -33,7 +33,7 @@ git -C "$GRAMMAR_WORK" \
 git clone --bare "$GRAMMAR_WORK" "$GRAMMAR_REMOTE" >/dev/null
 
 cd "$ROOT"
-for file in *.kb; do
+for file in examples/*.kb; do
   echo "zed parse $file"
   npx --yes tree-sitter-cli parse --config-path "$TREE_SITTER_CONFIG" --quiet "$file" >/dev/null
   npx --yes tree-sitter-cli query --config-path "$TREE_SITTER_CONFIG" --quiet "$HIGHLIGHTS" "$file" >/dev/null

@@ -524,5 +524,5 @@ Some imported configurations contain structures or state machines that the
 decompiler only partially models. Use roundtrip checks to assess a result
 before adopting the reconstructed source.
 
-For focused examples, see [tap-hold](tap_hold_sample.kb) and
-[SpaceFn state](spacefn_state_sample.kb).
+For focused examples, see [tap-hold](examples/tap_hold_sample.kb) and
+[SpaceFn state](examples/spacefn_state_sample.kb).

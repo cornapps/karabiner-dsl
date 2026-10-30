@@ -13,7 +13,7 @@ from karabiner_dsl.pipeline import compile_file, roundtrip_file
 
 
 ROOT = Path(__file__).resolve().parents[1]
-EXAMPLE = ROOT / "basic_example.kb"
+EXAMPLE = ROOT / "examples" / "basic_example.kb"
 
 
 class BasicExampleTests(unittest.TestCase):
