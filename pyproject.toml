@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "karabiner-dsl"
+dynamic = ["version"]
+description = "Write Karabiner-Elements rules as short English sentences."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Alex Ruimy" }]
+keywords = ["karabiner", "karabiner-elements", "keyboard", "macos", "dsl"]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/cornapps/karabiner-dsl"
+Documentation = "https://github.com/cornapps/karabiner-dsl/blob/main/GUIDE.md"
+Repository = "https://github.com/cornapps/karabiner-dsl"
+Issues = "https://github.com/cornapps/karabiner-dsl/issues"
+"Corn Apps" = "https://cornapps.org"
+
+[project.scripts]
+karabiner-dsl = "karabiner_dsl.cli:main"
+
+[tool.hatch.version]
+path = "karabiner_dsl/_version.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["karabiner_dsl"]
+
+[tool.hatch.build.targets.sdist]
+include = ["/karabiner_dsl", "/pyproject.toml", "/README.md", "/GUIDE.md", "/LICENSE"]

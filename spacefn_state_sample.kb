@@ -1,0 +1,8 @@
+when @_spacefn_mode is 0
+  basic spacebar:
+    alone sends spacebar halt
+    held set @spacefn_mode 1 until key up 0
+    if canceled sends spacebar
+    alone timeout 300ms
+    held threshold 150ms
+    delay 150ms

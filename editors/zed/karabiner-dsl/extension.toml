@@ -1,0 +1,20 @@
+id = "karabiner-dsl"
+name = "Karabiner DSL"
+version = "0.0.1"
+schema_version = 1
+description = "Karabiner DSL language support for .kb files."
+repository = "https://github.com/cornapps/karabiner-dsl"
+authors = ["Alex Ruimy"]
+languages = ["languages/karabiner-dsl"]
+capabilities = []
+
+[grammars.karabiner_dsl]
+repository = "https://github.com/cornapps/karabiner-dsl"
+rev = "main"
+path = "editors/zed/karabiner-dsl/grammars/tree-sitter-karabiner-dsl"
+
+[language_servers]
+
+[context_servers]
+
+[slash_commands]

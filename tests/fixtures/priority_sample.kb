@@ -1,0 +1,16 @@
+language 1
+
+devices:
+  remote:
+    id 1:2
+    enabled
+    ignores modifiers
+
+when device remote and app Terminal and @scroll:
+  volume_up scrolls down 32
+
+when device remote and @scroll:
+  volume_up scrolls up 32
+
+when device remote:
+  volume_up sends volume_down

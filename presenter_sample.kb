@@ -1,0 +1,40 @@
+device 1:1 enabled
+
+when device 1:1
+  basic up_arrow:
+    optional any
+    sends left_control
+    sends left_control
+
+  basic down_arrow:
+    optional any
+    sends return
+
+  basic left_option:
+    optional any
+    set @presenter_scroll_layer 1 until key up 0
+
+  basic left_option+tab:
+    optional any
+    sends vk_none
+
+  when @presenter_scroll_layer is 0
+    basic tab:
+      opens Mail
+
+  when app Mail
+    when @presenter_scroll_layer is 1
+      basic volume_up:
+        scrolls up 32
+      basic volume_down:
+        scrolls down 32
+
+    when @presenter_scroll_layer is 0
+      basic volume_up:
+        sends cmd+shift+open_bracket
+      basic volume_down:
+        sends cmd+shift+close_bracket
+
+  basic left_shift+dictation:
+    optional any
+    sends vk_none

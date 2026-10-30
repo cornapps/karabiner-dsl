@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+.ruff_cache/
+
+# Build output
+.build/
+dist/
+
+# Roundtrip output for the showcase fixture holds machine-specific helper paths
+tests/fixtures/*.test.json
+tests/fixtures/*.test.kb
+
+# Zed builds these from the grammar sources
+editors/zed/karabiner-dsl/grammars/karabiner_dsl/
+editors/zed/karabiner-dsl/grammars/*.wasm

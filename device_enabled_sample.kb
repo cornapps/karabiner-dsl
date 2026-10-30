@@ -1,0 +1,4 @@
+device 6:1 keyboard+pointing enabled
+device 7:1 swaps command option
+
+cmd+shift+0 opens Brave Browser

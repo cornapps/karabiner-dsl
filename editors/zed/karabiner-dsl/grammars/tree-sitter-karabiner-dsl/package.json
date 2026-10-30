@@ -1,0 +1,22 @@
+{
+  "name": "tree-sitter-karabiner-dsl",
+  "version": "0.0.1",
+  "description": "Tree-sitter grammar for Karabiner DSL.",
+  "license": "MIT",
+  "keywords": [
+    "tree-sitter",
+    "karabiner",
+    "keyboard"
+  ],
+  "tree-sitter": [
+    {
+      "scope": "source.karabiner-dsl",
+      "file-types": [
+        "kb"
+      ]
+    }
+  ],
+  "devDependencies": {
+    "tree-sitter-cli": "^0.25.10"
+  }
+}
