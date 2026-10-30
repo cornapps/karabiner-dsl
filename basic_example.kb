@@ -1,0 +1,33 @@
+# A starter config for Karabiner DSL. Copy it and change it to suit you.
+# Compile it with: karabiner-dsl basic_example.kb -o karabiner.json
+
+# Caps Lock sends Escape.
+caps_lock sends escape
+
+# Command-Shift-1 opens Finder.
+cmd+shift+1 opens Finder
+
+# In Terminal, Control-L sends Command-K, which clears the screen.
+when app Terminal:
+  ctrl+l sends cmd+k
+
+# Page Up and Page Down scroll the window under the pointer.
+page_up scrolls up 32
+page_down scrolls down 32
+
+# Hold Right Option and press H, J, K, or L to send an arrow key.
+right_option holds @navigation
+when @navigation:
+  h sends left_arrow
+  j sends down_arrow
+  k sends up_arrow
+  l sends right_arrow
+
+# F9 copies the selection, waits a moment, and pastes it.
+actions:
+  copy_then_paste:
+    sends cmd+c
+    wait 200ms
+    sends cmd+v
+
+f9 triggers copy_then_paste
