@@ -106,7 +106,10 @@ module.exports = grammar({
       choice(
         seq("app", field("value", $.condition_tail)),
         seq("device", field("value", $.condition_tail)),
-        seq(field("variable", $.variable), field("operator", $.condition_operator), field("value", $.condition_tail)),
+        seq(
+          field("variable", $.variable),
+          optional(seq(field("operator", $.condition_operator), field("value", $.condition_tail))),
+        ),
       ),
       optional(":"),
     ),
@@ -197,6 +200,16 @@ module.exports = grammar({
       "track",
       "right-clicks",
       "left-clicks",
+      "triggers",
+      "enables",
+      "disables",
+      "holds",
+      "set",
+      "set_variable",
+      "wait",
+      "delay",
+      "scrolls",
+      "moves",
     ),
 
     basic_action: $ => seq(

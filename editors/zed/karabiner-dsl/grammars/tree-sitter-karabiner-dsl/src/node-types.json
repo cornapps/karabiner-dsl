@@ -195,7 +195,7 @@
       },
       "value": {
         "multiple": false,
-        "required": true,
+        "required": false,
         "types": [
           {
             "type": "condition_tail",
@@ -925,11 +925,19 @@
     "named": true
   },
   {
+    "type": "disables",
+    "named": false
+  },
+  {
     "type": "duration",
     "named": true
   },
   {
     "type": "enabled",
+    "named": false
+  },
+  {
+    "type": "enables",
     "named": false
   },
   {
@@ -950,6 +958,10 @@
   },
   {
     "type": "hold",
+    "named": false
+  },
+  {
+    "type": "holds",
     "named": false
   },
   {
@@ -1015,6 +1027,10 @@
   {
     "type": "mode_name",
     "named": true
+  },
+  {
+    "type": "moves",
+    "named": false
   },
   {
     "type": "numpad",
@@ -1110,6 +1126,10 @@
   },
   {
     "type": "tracks",
+    "named": false
+  },
+  {
+    "type": "triggers",
     "named": false
   },
   {

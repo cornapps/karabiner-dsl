@@ -444,20 +444,33 @@
                   }
                 },
                 {
-                  "type": "FIELD",
-                  "name": "operator",
-                  "content": {
-                    "type": "SYMBOL",
-                    "name": "condition_operator"
-                  }
-                },
-                {
-                  "type": "FIELD",
-                  "name": "value",
-                  "content": {
-                    "type": "SYMBOL",
-                    "name": "condition_tail"
-                  }
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SEQ",
+                      "members": [
+                        {
+                          "type": "FIELD",
+                          "name": "operator",
+                          "content": {
+                            "type": "SYMBOL",
+                            "name": "condition_operator"
+                          }
+                        },
+                        {
+                          "type": "FIELD",
+                          "name": "value",
+                          "content": {
+                            "type": "SYMBOL",
+                            "name": "condition_tail"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
                 }
               ]
             }
@@ -1065,6 +1078,46 @@
         {
           "type": "STRING",
           "value": "left-clicks"
+        },
+        {
+          "type": "STRING",
+          "value": "triggers"
+        },
+        {
+          "type": "STRING",
+          "value": "enables"
+        },
+        {
+          "type": "STRING",
+          "value": "disables"
+        },
+        {
+          "type": "STRING",
+          "value": "holds"
+        },
+        {
+          "type": "STRING",
+          "value": "set"
+        },
+        {
+          "type": "STRING",
+          "value": "set_variable"
+        },
+        {
+          "type": "STRING",
+          "value": "wait"
+        },
+        {
+          "type": "STRING",
+          "value": "delay"
+        },
+        {
+          "type": "STRING",
+          "value": "scrolls"
+        },
+        {
+          "type": "STRING",
+          "value": "moves"
         }
       ]
     },
